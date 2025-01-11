@@ -7,13 +7,16 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class GitStudy2Application {
 
     public static void main(String[] args) {
-        System.out.println("newline");
-        System.out.println("a");
-        System.out.println("b");
-        System.out.println("c");
-        System.out.println("d");
-        System.out.println("e");
-        SpringApplication.run(GitStudy2Application.class, args);
+        JavaProgrammer java = new JavaProgrammer();
+        CProgrammer c = new CProgrammer();
+        PythonProgrammer python = new PythonProgrammer();
+        JavaScriptProgrammer javascript = new JavaScriptProgrammer();
+        writeCode(javascript);
+        writeCode(c);
+        writeCode(python);
+    }
 
+    public static void writeCode(Programmer programmer) {
+        programmer.writeCode();
     }
 }

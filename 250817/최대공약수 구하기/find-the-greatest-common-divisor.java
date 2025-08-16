@@ -6,15 +6,14 @@ public class Main {
         int n = sc.nextInt();
         int m = sc.nextInt();
         // Please write your code here.
-        asd(n,m);
+        System.out.print(asd(n,m));
     }
-    public static void asd(int n, int m){
-        int a = 0;
-        for(int i = 1; i <= Math.min(n,m); i++){
-            if(n % i == 0 && m % i == 0){
-                a = i;
-            }
+    public static int asd(int n, int m){
+        while(m != 0){
+            int r = n % m; // 나머지 계산
+            n = m; // m(낮은숫자)를 n으로
+            m = r; // 나머지를 m으로 옮김
         }
-        System.out.print(a);
+        return n;
     }
 }
